@@ -1,0 +1,8 @@
+[user]
+	name = AttoCat
+	email = contact@attocat.com
+	signingkey = 8A45D07CDC385CAB
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
