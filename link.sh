@@ -33,4 +33,5 @@ if [ ! -e "$HOME/.ssh/config" ]
 end
 ln -snfv $BASEDIR/mac/.ssh/config $HOME/.ssh/config
 
+fish -c "fisher update"
 cd $HOME
