@@ -3,7 +3,7 @@ if [ $(uname) = Darwin ]; then
     if ! type -t brew ; then
         echo "---Install and update Homebrew---"
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        echo "---Installed!!"
+        echo "---Installed!!---"
     else
         echo "---Homebrew is already installed, update...---"
     fi
