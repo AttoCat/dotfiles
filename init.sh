@@ -14,4 +14,5 @@ if [ $(uname) = Darwin ]; then
 fi
 
 fish -c "fisher update"
+chsh -s `which fish`
 fish
