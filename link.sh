@@ -21,3 +21,16 @@ for f in .??*;
     end
     ln -snfv $BASEDIR/$f $HOME/$f
 end
+
+if [ $(uname) = Darwin ]
+    if [ ! -e "$HOME/.ssh" ]
+    mkdir $HOME/.ssh
+    end
+end
+cd $HOME/.ssh
+if [ ! -e "$HOME/.ssh/config" ]
+    mv -f "$HOME/.ssh/config" "$HOME/dotfiles-backup"
+end
+ln -snfv $BASEDIR/mac/.ssh/config $HOME/.ssh/config
+
+cd $HOME
