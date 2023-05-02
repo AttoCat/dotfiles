@@ -10,6 +10,6 @@ echo "---Install some packages with HomeBrew---"
 brew bundle > /dev/null 2>&1
 echo "---Installed!---"
 echo "---Restore config of software---"
-defaults import com.codefalling.MacGesture ./mac/macgesture-backup.plist
-defaults import org.p0deje.Maccy ./mac/macgesture-backup.plist
+defaults import com.codefalling.MacGesture ./Mac/macgesture-backup.plist
+defaults import org.p0deje.Maccy ./Mac/macgesture-backup.plist
 echo "---Restored!---"

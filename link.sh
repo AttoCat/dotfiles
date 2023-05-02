@@ -11,6 +11,7 @@ else
 end
 mkdir $HOME/dotfiles-backup
 
+#Global link
 for f in .??*;
     echo "$f"
     [ "$f" = ".gitignore" ]; and continue
@@ -22,16 +23,19 @@ for f in .??*;
     ln -snfv $BASEDIR/$f $HOME/$f
 end
 
+#Mac link
 if [ $(uname) = Darwin ]
     if [ ! -e "$HOME/.ssh" ]
-    mkdir $HOME/.ssh
+        mkdir $HOME/.ssh
     end
-end
-cd $HOME/.ssh
-if [ ! -e "$HOME/.ssh/config" ]
-    mv -f "$HOME/.ssh/config" "$HOME/dotfiles-backup"
-end
-ln -snfv $BASEDIR/mac/.ssh/config $HOME/.ssh/config
+    if [ ! -e "$HOME/.ssh/config" ]
+        mv -f "$HOME/.ssh/config" "$HOME/dotfiles-backup"
+    end
+    ln -snfv $BASEDIR/Mac/.ssh/config $HOME/.ssh/config
 
-fish -c "fisher update"
+    ln -snfv $BASEDIR/Mac/karabiner $HOME/.config/karabiner
+    ln -snfv $BASEDIR/Mac/raycast $HOME/.config/raycast
+end
+
+
 cd $HOME

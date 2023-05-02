@@ -5,4 +5,5 @@ fi
 
 echo "---Set fish as login shell---"
 chsh -s `which fish`
+fish -c "fisher update"
 fish
